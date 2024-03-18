@@ -9,24 +9,6 @@ import {
 import pkg from "pg";
 const { Client } = pkg;
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBEcjGyiFFkHELCiZnA_6AeUFVVy_J1LEc",
-  authDomain: "prueba-docker-f4ba0.firebaseapp.com",
-  projectId: "prueba-docker-f4ba0",
-  storageBucket: "prueba-docker-f4ba0.appspot.com",
-  messagingSenderId: "228251118350",
-  appId: "1:228251118350:web:a9c9d51007fa8e5c14855f",
-};
-const postgressConfig = {
-  host: "ceu9lmqblp8t3q.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com",
-  port: 5432,
-  database: "d3nti5jnr2u6dg",
-  user: "ue7mkb7g5m9lh3",
-  password: "p60ba528dddcc490233f3734bafad9fe71114a9b98a1358f8522cb4785340a30a",
-  ssl: {
-    rejectUnauthorized: false,
-  },
-};
 
 const postgressClient = new Client(postgressConfig);
 
