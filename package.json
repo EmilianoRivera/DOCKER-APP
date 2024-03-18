@@ -1,0 +1,19 @@
+{
+  "name": "dock-app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "firebase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "firebase": "^10.8.1",
+    "pg": "^8.11.3"
+  }
+}
