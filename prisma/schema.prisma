@@ -40,8 +40,6 @@ model Nombre_Administrador {
   Administrdor Administrdor?
 }
 
-
-
 model Reportes {
   rep_id           Int            @id @default(autoincrement())
   rep_ubicacion    String
@@ -55,19 +53,22 @@ model Reportes {
   Estado_reporte   Estado_reporte @relation(fields: [edo_id], references: [edo_id])
   Usuario          Usuario        @relation(fields: [usu_id], references: [usu_id])
 }
+
 model Nombre_Usuario {
-  nomu_id     Int      @id @default(autoincrement())
+  nomu_id     Int     @id @default(autoincrement())
   nomu_nombre String?
   nomu_appat  String?
   nomu_apmat  String?
-  nomu_fb_uid String 
-  Usuario     Usuario?
+
+  Usuario Usuario?
 }
+
 model Usuario {
   usu_id                            Int                                @id @default(autoincrement())
   usu_fechanac                      DateTime
   usu_correo                        String
   usu_estado_cuenta                 Boolean
+  usu_fb_uid                        String @default("")
   nomu_id                           Int                                @unique
   Reportes                          Reportes?
   Nombre_Usuario                    Nombre_Usuario                     @relation(fields: [nomu_id], references: [nomu_id])
